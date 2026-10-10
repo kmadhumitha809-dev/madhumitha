@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madhumitha | ECE Student & Aspiring Software Developer</title>
+<meta name="description" content="Portfolio of Madhumitha, an Electronics and Communication Engineering student aspiring to be a software developer.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--amber:#d4880f;--amber-l:#e8b865;--cream:#faf0e2;--ink:#1a1209;--card:#fffaf2;--muted:#5c4a2e}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.05}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1180px;margin:auto;padding:0 24px}
+section{padding:90px 0}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:620px;margin-bottom:36px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;border:1.5px solid var(--ink);font-weight:500;font-size:.95rem;cursor:pointer;background:transparent;color:var(--ink);transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--ink);color:#fff}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(212,136,15,.92);backdrop-filter:blur(8px)}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600}
+.links{display:flex;gap:26px;font-size:.88rem}
+.links a:hover{text-decoration:underline;text-underline-offset:5px}
+#menu{display:none;background:none;border:0;font-size:1.7rem;cursor:pointer}
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;padding:70px 0 0;background:radial-gradient(circle at 20% 15%,var(--amber-l),var(--amber) 55%,#c47a08)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:20px;min-height:640px}
+.hero h1{font-size:clamp(3.4rem,8.5vw,7rem);letter-spacing:-.01em}
+.role{margin-top:18px;font-weight:600;color:var(--ink)}
+.tag{color:var(--ink);max-width:460px;margin:8px 0 26px}
+.hero .btn.dark{border-color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chips span{padding:6px 14px;border:1px solid rgba(26,18,9,.55);border-radius:999px;color:var(--ink);font-size:.82rem;font-weight:500}
+.portrait{position:relative;align-self:end;justify-self:center;width:min(360px,80%);aspect-ratio:3/4;border-radius:200px 200px 0 0;background:linear-gradient(#f3d9a4,#e8b865);overflow:hidden;display:grid;place-items:center}
+.portrait b{font-family:'Cormorant Garamond',serif;font-size:7rem;color:var(--amber);opacity:.7}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.badge{position:absolute;left:4%;bottom:30%;z-index:2;background:#fff;color:var(--ink);border:1.5px solid var(--amber);border-radius:50%;padding:22px 26px;transform:rotate(-12deg);text-align:center;font-weight:600;font-size:.9rem;line-height:1.3}
+.badge small{display:block;color:var(--amber);font-weight:500}
+.brush{position:absolute;pointer-events:none}
+.b1{left:-30px;bottom:30px;width:380px}.b2{right:-20px;top:30px;width:110px}
+.feature{position:absolute;right:24px;bottom:0;z-index:3;width:min(380px,92%);background:var(--card);color:var(--ink);padding:16px;border-radius:6px 6px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.1)}
+.feature p{font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.15;margin-bottom:12px}
+.thumb{height:120px;border-radius:16px;background:linear-gradient(135deg,#1a1209,#5a3a08);display:grid;place-items:center;color:var(--amber-l);font-weight:600;position:relative}
+.thumb i{position:absolute;top:10px;left:10px;font-style:normal;background:var(--amber-l);color:var(--ink);padding:3px 12px;border-radius:999px;font-size:.78rem}
+.feature{margin-bottom:0}
+/* cards */
+.grid{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid #ecd9b8;border-radius:22px;padding:26px;transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(150,95,0,.15)}
+.card h3{font-size:1.6rem;margin-bottom:8px}
+.card .k{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--amber);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tags span{background:#f6e3c0;padding:4px 12px;border-radius:999px;font-size:.82rem}
+.status{display:inline-block;margin:10px 0;padding:3px 12px;border-radius:999px;background:var(--ink);color:#fff;font-size:.75rem}
+.card ul{padding-left:18px;color:var(--muted);font-size:.92rem;margin-top:8px}
+.card .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.card .btn{padding:8px 16px;font-size:.82rem}
+.alt{background:#f3e0bd}
+.timeline{border-left:3px solid var(--amber);padding-left:26px;max-width:700px}
+.empty{border:2px dashed #d9b774;border-radius:22px;padding:40px;text-align:center;color:var(--muted)}
+/* form */
+form{display:grid;gap:14px;max-width:620px}
+label{font-weight:500;font-size:.9rem}
+input,textarea{width:100%;padding:12px 16px;border:1.5px solid #cfae6c;border-radius:14px;background:#fff;font:inherit;margin-top:4px}
+.err{color:#a11;font-size:.8rem;min-height:1em}
+#msg{font-weight:500}
+.links2{display:flex;gap:18px;margin-top:22px;flex-wrap:wrap}
+footer{background:var(--ink);color:#e8d9bd;padding:36px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+.fl{display:flex;gap:18px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+@media(max-width:860px){
+ .links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--amber);padding:20px 24px}
+ .links.open{display:flex}#menu{display:block}.nav-cta{display:none}
+ .hero .wrap{grid-template-columns:1fr;min-height:0}
+ .portrait{margin-top:20px}.feature{position:relative;right:auto;margin:20px auto 0;width:100%}
+ .b1{width:220px}.g3{grid-template-columns:1fr}.badge{left:0;bottom:36%}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap"><nav aria-label="Main">
+  <a href="#home" class="logo">Madhumitha</a>
+  <div class="links" id="links">
+   <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+  </div>
+  <a class="btn nav-cta" href="resume.pdf" download>Download Resume</a>
+  <button id="menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+ </nav></div>
+</header>
+
+<main>
+<section class="hero" id="home" style="padding-bottom:0">
+ <svg class="brush b1" viewBox="0 0 400 200" fill="none" aria-hidden="true"><path d="M0 170C120 130 300 60 380 50c30 0 10 30-30 45C250 130 120 175 20 200" stroke="#1a1209" stroke-width="22" stroke-linecap="round"/></svg>
+ <svg class="brush b2" viewBox="0 0 100 160" aria-hidden="true"><path d="M10 0l70 40 20 70-40-20-30-50z" fill="#1a1209"/></svg>
+ <div class="wrap">
+  <div style="padding-bottom:60px">
+   <h1>Hi, I'm<br>Madhumitha</h1>
+   <p class="role">ECE Student | Aspiring Software Developer</p>
+   <p class="tag">Building practical solutions through programming, technology, and continuous learning.</p>
+   <a class="btn dark" href="#projects">Explore My Projects</a>
+   <a class="btn" href="#contact">Contact Me</a>
+   <div class="chips" aria-label="Skills"><span>Java</span><span>Python</span><span>C</span><span>HTML / CSS / JS</span><span>MySQL</span></div>
+  </div>
+  <div style="position:relative;display:flex;flex-direction:column;justify-content:flex-end">
+   <div class="badge">Madhumitha<small>Aspiring Developer</small></div>
+   <!-- Replace photo.jpg with your portrait (keep the file in the same folder) -->
+   <div class="portrait"><b>M</b><img src="photo.jpg" alt="Portrait of Madhumitha" onerror="this.remove()"></div>
+  </div>
+  <aside class="feature" aria-label="Featured project">
+   <p>GeoWork AI — Smart Attendance System</p>
+   <div class="thumb"><i>Planned</i>Geofenced attendance</div>
+   <a class="btn" style="margin:12px 0 4px;padding:8px 18px;font-size:.85rem" href="#projects">View Details ↗</a>
+  </aside>
+ </div>
+</section>
+
+<section id="about"><div class="wrap">
+ <h2 class="reveal">About Me</h2>
+ <p class="lead reveal">I am Madhumitha, an Electronics and Communication Engineering student with an interest in software development and problem-solving. I enjoy exploring programming concepts, developing practical projects, and learning how technology can solve real-world challenges. My goal is to become a skilled software developer who builds reliable, user-friendly, and meaningful applications.</p>
+ <div class="grid g3">
+  <div class="card reveal"><span class="k">Education</span><h3>Electronics & Communication Engineering</h3></div>
+  <div class="card reveal"><span class="k">Current CGPA</span><h3>7.0</h3></div>
+  <div class="card reveal"><span class="k">Career Interest</span><h3>Software Development</h3></div>
+ </div>
+ <h3 style="font-size:1.8rem;margin:40px 0 8px">What I'm Working Toward</h3>
+ <p class="lead">Improving my coding skills, building projects, and preparing for software development opportunities.</p>
+</div></section>
+
+<section id="skills" class="alt"><div class="wrap">
+ <h2 class="reveal">Technical Skills</h2>
+ <p class="lead">Edit or remove any tag below to match what you've actually learned.</p>
+ <div class="grid g3">
+  <div class="card reveal"><h3>Languages</h3><div class="tags"><span>Java</span><span>C</span><span>Python</span></div></div>
+  <div class="card reveal"><h3>Web Development</h3><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+  <div class="card reveal"><h3>Tools & Platforms</h3><div class="tags"><span>Git & GitHub</span><span>VS Code</span><span>MySQL</span></div></div>
+ </div>
+ <div class="card reveal" style="margin-top:22px"><h3>Currently Learning</h3><div class="tags"><span>[Add what you're learning]</span></div></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+ <h2 class="reveal">Featured Projects</h2>
+ <p class="lead">Update each project's status honestly — Planned, In Progress, or Completed.</p>
+ <div class="grid g3">
+  <article class="card reveal"><span class="k">Software</span><h3>GeoWork AI</h3><span class="status">Status: [Planned / In Progress / Completed]</span>
+   <p>Geolocation-based employee attendance concept that uses geofencing to verify whether an employee is within an authorized workplace boundary.</p>
+   <ul><li>Planned: login, GPS verification, geofencing, check-in/out, attendance history, admin dashboard</li><li>My contribution: [Add]</li></ul>
+   <div class="tags"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>JavaScript</span></div>
+   <div class="row"><a class="btn" href="#projects">View Details</a><a class="btn" href="#" aria-disabled="true">Source Code</a></div></article>
+  <article class="card reveal"><span class="k">Hardware</span><h3>MicroTrap-Sense</h3><span class="status">Status: [Planned / In Progress / Completed]</span>
+   <p>Low-cost preliminary prototype for investigating suspected microplastic particles in water using optical illumination and photodetectors. Not a validated instrument.</p>
+   <ul><li>Needs evaluation of sensitivity, repeatability and non-plastic interference</li><li>My contribution: [Add]</li></ul>
+   <div class="tags"><span>ESP32</span><span>Photodiodes</span><span>LM358</span><span>UV/Blue LEDs</span></div>
+   <div class="row"><a class="btn" href="#projects">View Details</a><a class="btn" href="#" aria-disabled="true">Source Code</a></div></article>
+  <article class="card reveal"><span class="k">Embedded</span><h3>Drowsiness Detection & Speed Control</h3><span class="status">Status: [Planned / In Progress / Completed]</span>
+   <p>Academic prototype that monitors eye-blink behavior and, on prolonged closure, sounds an alert and demonstrates speed reduction on a model vehicle.</p>
+   <ul><li>Eye-closure monitoring, buzzer warning, motor speed reduction</li><li>My contribution: [Add]</li></ul>
+   <div class="tags"><span>ESP32</span><span>IR Sensor</span><span>Buzzer</span><span>Motor Driver</span></div>
+   <div class="row"><a class="btn" href="#projects">View Details</a><a class="btn" href="#" aria-disabled="true">Source Code</a></div></article>
+ </div>
+</div></section>
+
+<section id="education" class="alt"><div class="wrap">
+ <h2 class="reveal">Education</h2>
+ <div class="timeline reveal">
+  <h3>Bachelor of Engineering — Electronics and Communication Engineering</h3>
+  <p><strong>[Enter College Name]</strong><br>[Start Year – Expected Graduation Year] · Current CGPA: 7.0</p>
+  <p style="color:var(--muted);margin-top:8px">Interested in programming, software engineering, and practical technical projects.</p>
+ </div>
+ <div class="links2"><a class="btn" href="#">HackerRank</a><a class="btn" href="#">LeetCode</a><a class="btn" href="#">GitHub</a><a class="btn" href="#">LinkedIn</a></div>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+ <h2 class="reveal">Certifications</h2>
+ <div class="empty reveal">Certifications will be added here.</div>
+ <div class="row" style="margin-top:30px"><a class="btn dark" href="resume.pdf" download>Download Resume</a> <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume</a></div>
+</div></section>
+
+<section id="contact" class="alt"><div class="wrap">
+ <h2 class="reveal">Let's Connect</h2>
+ <p class="lead">Have an opportunity, project idea, or technical collaboration in mind? I'd be happy to connect.</p>
+ <form id="form" novalidate>
+  <div><label for="name">Name</label><input id="name" required><div class="err"></div></div>
+  <div><label for="email">Email</label><input id="email" type="email" required><div class="err"></div></div>
+  <div><label for="subject">Subject</label><input id="subject" required><div class="err"></div></div>
+  <div><label for="message">Message</label><textarea id="message" rows="5" required></textarea><div class="err"></div></div>
+  <button class="btn dark" id="send" type="submit" style="justify-self:start">Send Message</button>
+  <p id="msg" role="status"></p>
+ </form>
+ <div class="links2"><a href="mailto:your-email@example.com">✉ Email</a><a href="#">LinkedIn</a><a href="#">GitHub</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <span>Designed and built by Madhumitha. © <span id="yr"></span></span>
+ <div class="fl"><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="#home">↑ Back to top</a></div>
+</div></footer>
+
+<script>
+// ---- Set your Formspree (or similar) endpoint here to enable the contact form ----
+const FORM_ENDPOINT = "";
+document.getElementById("yr").textContent = new Date().getFullYear();
+const links = document.getElementById("links"), menu = document.getElementById("menu");
+menu.onclick = () => { const o = links.classList.toggle("open"); menu.setAttribute("aria-expanded", o) };
+links.addEventListener("click", () => links.classList.remove("open"));
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) } }), { threshold: .12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+const form = document.getElementById("form"), msg = document.getElementById("msg"), send = document.getElementById("send");
+form.addEventListener("submit", async e => {
+  e.preventDefault(); let ok = true;
+  form.querySelectorAll("input,textarea").forEach(f => {
+    const err = f.parentElement.querySelector(".err"); err.textContent = "";
+    if (!f.value.trim()) { err.textContent = "This field is required."; ok = false }
+    else if (f.type === "email" && !/^\S+@\S+\.\S+$/.test(f.value)) { err.textContent = "Enter a valid email."; ok = false }
+  });
+  if (!ok) return;
+  if (!FORM_ENDPOINT) { msg.textContent = "Form isn't connected yet — please use the email link below."; return }
+  send.disabled = true; send.textContent = "Sending…";
+  try {
+    const r = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(Object.fromEntries([...form.querySelectorAll("input,textarea")].map(f => [f.id, f.value]))) });
+    if (!r.ok) throw 0; msg.textContent = "Thank you! Your message has been sent."; form.reset();
+  } catch { msg.textContent = "Something went wrong. Please try again or email me directly." }
+  send.disabled = false; send.textContent = "Send Message";
+});
+</script>
+</body>
+</html>
